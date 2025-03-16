@@ -55,6 +55,6 @@ public class UserApiCRUDTests extends BaseTest {
     public void shouldDeleteUser() {
         int userId = 2;
         ReadableResponse deletedUserResponse = userApiController.deleteUserWithUserId(userId);
-        assertThat("When user deleted successfully, response code should be '200'", deletedUserResponse.getStatusCode(), is(SC_NO_CONTENT));
+        assertThat("When user deleted successfully, response code should be '204'", deletedUserResponse.getStatusCode(), is(SC_NO_CONTENT));
     }
 }
